@@ -7,41 +7,59 @@
 <i> [webpack-dev-server] On Your Network (IPv4): http://172.17.0.2:3000/
 <i> [webpack-dev-server] Content not from webpack is served from './public' directory
 Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
-asset bundle.js 1.4 MiB [emitted] (name: main)
+asset bundle.js 1.45 MiB [emitted] (name: main)
 asset index.html 1.92 KiB [emitted]
 runtime modules 27.5 KiB 14 modules
-modules by path ./node_modules/ 1.24 MiB 31 modules
-modules by path ./src/ 16.8 KiB
-  modules by path ./src/*.css 11.1 KiB 4 modules
-  modules by path ./src/*.js 5.73 KiB
-    ./src/index.js 670 bytes [built] [code generated]
-    ./src/App.js 5.08 KiB [built] [code generated]
-modules by path ./.ve/ 15.1 KiB
-  modules by path ./.ve/*.js 10.6 KiB 2 modules
-  modules by path ./.ve/*.css 2.93 KiB
-    ./.ve/EditorOverlay.css 2.25 KiB [built] [code generated]
-    ./node_modules/css-loader/dist/cjs.js!./.ve/EditorOverlay.css 697 bytes [built] [code generated]
-  ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 1492 ms
+cacheable modules 1.29 MiB
+  modules by path ./node_modules/ 1.24 MiB 31 modules
+  modules by path ./src/ 35.5 KiB
+    modules by path ./src/components/ 21.1 KiB 12 modules
+    modules by path ./src/*.css 11.1 KiB 4 modules
+    modules by path ./src/*.js 3.35 KiB
+      ./src/index.js 670 bytes [built] [code generated]
+      ./src/App.js 2.7 KiB [built] [code generated]
+  modules by path ./.ve/ 15.1 KiB
+    modules by path ./.ve/*.js 10.6 KiB 2 modules
+    modules by path ./.ve/*.css 2.93 KiB 2 modules
+    ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 1588 ms
 assets by status 1.92 KiB [cached] 1 asset
-assets by path *.js 1.51 MiB
-  asset bundle.js 1.45 MiB [emitted] (name: main)
-  asset main.2d877fed09bf1167a161.hot-update.js 61.8 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.2d877fed09bf1167a161.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.51 MiB = bundle.js 1.45 MiB main.2d877fed09bf1167a161.hot-update.js 61.8 KiB
-cached modules 1.27 MiB [cached] 41 modules
+assets by path *.js 1.48 MiB
+  asset bundle.js 1.46 MiB [emitted] (name: main)
+  asset main.bdc6a577aea51b806d9b.hot-update.js 17.1 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.bdc6a577aea51b806d9b.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.48 MiB = bundle.js 1.46 MiB main.bdc6a577aea51b806d9b.hot-update.js 17.1 KiB
+cached modules 1.29 MiB [cached] 53 modules
 runtime modules 27.5 KiB 14 modules
-javascript modules 23.8 KiB
-  modules by path ./src/components/*.css 14.2 KiB
-    ./src/components/VideoFeedWithSubtitles.css 2.3 KiB [built] [code generated]
-    ./src/components/SpeakerAvatars.css 2.28 KiB [built] [code generated]
-    ./src/components/Sidebar.css 2.26 KiB [built] [code generated]
-    ./src/components/AccessibilityControls.css 2.3 KiB [built] [code generated]
-    + 4 modules
-  modules by path ./src/components/*.js 6.83 KiB
-    ./src/components/VideoFeedWithSubtitles.js 1.87 KiB [built] [code generated]
-    ./src/components/SpeakerAvatars.js 1.19 KiB [built] [code generated]
-    ./src/components/Sidebar.js 1.63 KiB [built] [code generated]
-    ./src/components/AccessibilityControls.js 2.14 KiB [built] [code generated]
-  ./src/App.js 2.7 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 262 ms
+./src/App.js 11.1 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 138 ms
+assets by status 1.92 KiB [cached] 1 asset
+assets by path *.js 1.47 MiB
+  asset bundle.js 1.46 MiB [emitted] (name: main)
+  asset main.e2eca825046676c44e41.hot-update.js 4.23 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.e2eca825046676c44e41.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.47 MiB = bundle.js 1.46 MiB main.e2eca825046676c44e41.hot-update.js 4.23 KiB
+cached modules 1.3 MiB [cached] 53 modules
+runtime modules 27.5 KiB 14 modules
+./src/components/Sidebar.js 1.96 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 75 ms
+assets by status 1.92 KiB [cached] 1 asset
+assets by path *.js 1.48 MiB
+  asset bundle.js 1.47 MiB [emitted] (name: main)
+  asset main.7c71b4dd40687ef8be0e.hot-update.js 8.51 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.7c71b4dd40687ef8be0e.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.48 MiB = bundle.js 1.47 MiB main.7c71b4dd40687ef8be0e.hot-update.js 8.51 KiB
+cached modules 1.3 MiB [cached] 53 modules
+runtime modules 27.5 KiB 14 modules
+./src/components/VideoFeedWithSubtitles.js 5.43 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 62 ms
+assets by status 1.92 KiB [cached] 1 asset
+assets by path *.js 1.47 MiB
+  asset bundle.js 1.47 MiB [emitted] (name: main)
+  asset main.4aebf257ba2a5329d806.hot-update.js 4.79 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.4aebf257ba2a5329d806.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.47 MiB = bundle.js 1.47 MiB main.4aebf257ba2a5329d806.hot-update.js 4.79 KiB
+cached modules 1.3 MiB [cached] 53 modules
+runtime modules 27.5 KiB 14 modules
+./src/components/AccessibilityControls.js 2.24 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 58 ms

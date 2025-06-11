@@ -1,0 +1,31 @@
+.speaker-avatars-row {
+  display: flex;
+  gap: 22px;
+  margin: 26px 0 0 0;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 62px;
+  width: 540px;
+  max-width: 90vw;
+}
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+  gap: 2px;
+}
+.avatar span {
+  font-size: 2.2em;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.avatar-label {
+  font-size: .98em;
+  font-weight: 500;
+  color: var(--primary, #1A237E);
+  margin-top: 3px;
+  letter-spacing: .02em;
+}
+.avatar.speaker-1 span { color: #00B8D4; }
+.avatar.speaker-2 span { color: #FFD600; }

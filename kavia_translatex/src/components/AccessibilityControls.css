@@ -1,0 +1,28 @@
+.accessibility-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.accessibility-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.access-label {
+  font-size: 1em;
+  color: var(--text-secondary, #52617c);
+  font-weight: 500;
+}
+
+.access-dropdown {
+  padding: 4px 9px;
+  font-size: 0.98em;
+  border-radius: 5px;
+  border: 1px solid var(--border-color,#ececee);
+  background: #f6fbff;
+  color: var(--primary, #1A237E);
+}

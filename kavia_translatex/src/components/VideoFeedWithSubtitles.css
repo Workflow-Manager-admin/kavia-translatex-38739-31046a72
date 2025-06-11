@@ -19,6 +19,19 @@
   overflow: hidden;
   margin-bottom: 0;
   border: none;
+  transition: outline .14s;
+}
+
+.video-feed:focus-visible {
+  outline: 3px solid var(--accent, #FFD600);
+  box-shadow: 0 0 0 6px #ffd6002d;
+  background: #18204a;
+}
+
+.subtitles-overlay:focus-within .subtitle,
+.subtitle:focus-visible {
+  outline: 2px solid var(--accent, #FFD600);
+  background: #1A237Ee8;
 }
 
 .video-placeholder {

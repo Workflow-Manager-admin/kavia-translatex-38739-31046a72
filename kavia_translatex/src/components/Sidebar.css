@@ -29,10 +29,16 @@
   border-radius: 5px;
   padding: 8px 18px;
   cursor: pointer;
+  outline: none;
+  transition: background .16s, color .14s, box-shadow .13s;
 }
-.btn-sidebar:hover {
+.btn-sidebar:hover,
+.btn-sidebar:focus,
+.btn-sidebar:focus-visible {
   background: var(--secondary, #00B8D4);
   color: #fff;
+  outline: 2.5px solid var(--accent, #FFD600);
+  box-shadow: 0 0 0 5px #ffeb3b2f;
 }
 
 .sidebar-accessibility {

@@ -9,6 +9,10 @@
   --border-color: rgba(26,35,126,0.09);
   --navbar-height: 60px;
   --sidebar-width: 220px;
+  /* Accessibility palette additions */
+  --focus-outline: 2.5px solid var(--accent);
+  --focus-color: #ffd600;
+  --focus-bg: #22284211;
 }
 
 body {
@@ -89,12 +93,22 @@ body {
   font-weight: 500;
   cursor: pointer;
   outline: none;
-  transition: background .15s, color .13s;
+  transition: background .15s, color .13s, box-shadow .17s;
   margin: 0;
 }
 
+/* High-contrast and visible focus for all interactive controls */
+.btn:focus-visible, .btn-sidebar:focus-visible, .btn-outline:focus-visible,
+select:focus-visible, .access-dropdown:focus-visible {
+  outline: var(--focus-outline);
+  box-shadow: 0 0 0 4px var(--focus-bg);
+  z-index: 10;
+  background: var(--focus-bg);
+}
+
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn:focus-visible {
   background-color: var(--primary);
   color: var(--accent);
 }
@@ -112,11 +126,24 @@ body {
   border: 1px solid var(--border-color);
   font-weight: 500;
   box-shadow: 0 1px 2px 0 #ececee;
+  border-radius: 5px;
+  padding: 8px 18px;
+  transition: background .15s, color .13s, box-shadow .15s;
 }
 
-.btn-sidebar:hover {
+.btn-sidebar:hover,
+.btn-sidebar:focus,
+.btn-sidebar:focus-visible {
   background: var(--secondary);
   color: #fff;
+  outline: var(--focus-outline);
+  box-shadow: 0 0 0 4px var(--focus-bg);
+}
+
+select, .access-dropdown {
+  outline: none;
+  box-shadow: none;
+  transition: outline .13s, box-shadow .13s;
 }
 
 .main-layout {

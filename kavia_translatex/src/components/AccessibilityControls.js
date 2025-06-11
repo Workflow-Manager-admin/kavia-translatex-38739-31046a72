@@ -14,7 +14,7 @@ function AccessibilityControls({
   onDownloadTranscript = () => {},
 }) {
   return (
-    <div className="accessibility-controls">
+    <div className="accessibility-controls" aria-label="Accessibility controls">
       <div className="accessibility-row">
         <label htmlFor="speech-speed" className="access-label">Speech Speed:</label>
         <select
@@ -22,6 +22,8 @@ function AccessibilityControls({
           className="access-dropdown"
           value={speed}
           onChange={e => onSpeedChange(e.target.value)}
+          aria-label="Set speech speed"
+          tabIndex={0}
         >
           <option value="1">Normal</option>
           <option value="1.25">1.25x</option>
@@ -29,7 +31,17 @@ function AccessibilityControls({
         </select>
       </div>
       <div className="accessibility-row">
-        <button className="btn btn-sidebar" onClick={onDownloadTranscript}>
+        <button
+          className="btn btn-sidebar"
+          onClick={onDownloadTranscript}
+          type="button"
+          tabIndex={0}
+          aria-label="Download transcript"
+          role="button"
+          onKeyDown={e => {
+            if (e.key === ' ' || e.key === 'Enter') onDownloadTranscript();
+          }}
+        >
           Download Transcript
         </button>
       </div>

@@ -12,6 +12,20 @@
   gap: 11px;
 }
 
+.accessibility-row > .btn,
+.access-dropdown,
+select {
+  outline: none;
+}
+
+.accessibility-row > .btn:focus-visible,
+.access-dropdown:focus-visible,
+select:focus-visible {
+  outline: 2.5px solid var(--accent, #FFD600);
+  box-shadow: 0 0 0 3px #ffd6002b;
+  background: #fffde7;
+}
+
 .access-label {
   font-size: 1em;
   color: var(--text-secondary, #52617c);

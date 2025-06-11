@@ -18,7 +18,7 @@ function Sidebar({ children = null, controls = [] }) {
   const controlsToRender = Array.isArray(controls) && controls.length > 0 ? controls : demoControls;
 
   return (
-    <aside className="sidebar">
+    <aside className="sidebar" aria-label="Sidebar navigation" tabIndex={-1}>
       <div className="sidebar-section">
         <h2 className="sidebar-title">Controls</h2>
         {controlsToRender.map((ctl, idx) => (
@@ -26,7 +26,19 @@ function Sidebar({ children = null, controls = [] }) {
             {/* If label is a ReactNode, render inside a div (to allow custom UI structure). */}
             {typeof ctl.label === 'string'
               ? (
-                <button className="btn btn-sidebar" type="button" onClick={ctl.onClick}>{ctl.label}</button>
+                <button
+                  className="btn btn-sidebar"
+                  type="button"
+                  tabIndex={0}
+                  aria-label={ctl.label}
+                  onClick={ctl.onClick}
+                  onKeyDown={e => {
+                    if (e.key === ' ' || e.key === 'Enter') ctl.onClick();
+                  }}
+                  role="button"
+                >
+                  {ctl.label}
+                </button>
               )
               : ctl.label}
           </div>

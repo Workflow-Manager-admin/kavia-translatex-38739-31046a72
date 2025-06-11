@@ -46,17 +46,29 @@ function App() {
           <button
             className={`btn btn-sidebar${inputMode === 'voice' ? ' active' : ''}`}
             aria-pressed={inputMode === 'voice'}
+            aria-label="Switch to Voice Input"
             style={{ marginRight: 6 }}
             tabIndex={0}
             onClick={() => setInputMode('voice')}
+            onKeyDown={e => {
+              if (e.key === ' ' || e.key === 'Enter') setInputMode('voice');
+            }}
+            type="button"
+            role="button"
           >
             Voice
           </button>
           <button
             className={`btn btn-sidebar${inputMode === 'text' ? ' active' : ''}`}
             aria-pressed={inputMode === 'text'}
+            aria-label="Switch to Text Input"
             tabIndex={0}
             onClick={() => setInputMode('text')}
+            onKeyDown={e => {
+              if (e.key === ' ' || e.key === 'Enter') setInputMode('text');
+            }}
+            type="button"
+            role="button"
           >
             Text
           </button>
@@ -73,6 +85,7 @@ function App() {
             className="access-dropdown"
             onChange={e => setSelectedDomain(e.target.value)}
             aria-label="Choose translation domain"
+            tabIndex={0}
           >
             {domains.map(domain =>
               <option value={domain} key={domain}>{domain}</option>
@@ -86,16 +99,30 @@ function App() {
       label: (
         <>
           Accent:{" "}
-          <input type="checkbox" checked={accentMatch}
+          <input
+            type="checkbox"
+            checked={accentMatch}
             onChange={(e) => setAccentMatch(e.target.checked)}
+            aria-label="Enable accent match"
             aria-checked={accentMatch}
+            tabIndex={0}
+            onKeyDown={e => {
+              if (e.key === ' ' || e.key === 'Enter') setAccentMatch(v => !v);
+            }}
           />&nbsp;
           <span style={{ fontSize: '0.97em' }}>Match</span>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           Tone:{" "}
-          <input type="checkbox" checked={toneMatch}
+          <input
+            type="checkbox"
+            checked={toneMatch}
             onChange={(e) => setToneMatch(e.target.checked)}
+            aria-label="Preserve tone"
             aria-checked={toneMatch}
+            tabIndex={0}
+            onKeyDown={e => {
+              if (e.key === ' ' || e.key === 'Enter') setToneMatch(v => !v);
+            }}
           />&nbsp;
           <span style={{ fontSize: '0.97em' }}>Preserve</span>
         </>
@@ -108,7 +135,14 @@ function App() {
           <button
             className="btn btn-sidebar"
             aria-expanded={glossaryOpen}
+            aria-label={glossaryOpen ? 'Hide glossary panel' : 'Show glossary panel'}
+            tabIndex={0}
             onClick={() => setGlossaryOpen(v => !v)}
+            onKeyDown={e => {
+              if (e.key === ' ' || e.key === 'Enter') setGlossaryOpen(v => !v);
+            }}
+            role="button"
+            type="button"
           >
             Glossary {glossaryOpen ? '(Open)' : ''}
           </button>
@@ -122,7 +156,14 @@ function App() {
           <button
             className="btn btn-sidebar"
             aria-expanded={exportOpen}
+            aria-label={exportOpen ? 'Hide export panel' : 'Show export panel'}
+            tabIndex={0}
             onClick={() => setExportOpen(v => !v)}
+            onKeyDown={e => {
+              if (e.key === ' ' || e.key === 'Enter') setExportOpen(v => !v);
+            }}
+            role="button"
+            type="button"
           >
             Export {exportOpen ? '(Open)' : ''}
           </button>
@@ -169,8 +210,20 @@ function App() {
       }}>
       <strong>Export (Demo UI):</strong>
       <div>
-        <button className="btn btn-sidebar" style={{ marginTop: 8 }}>Export SRT</button>
-        <button className="btn btn-sidebar" style={{ marginLeft: 6, marginTop: 8 }}>Export Video</button>
+        <button
+          className="btn btn-sidebar"
+          aria-label="Export subtitles as SRT"
+          style={{ marginTop: 8 }}
+          type="button"
+          tabIndex={0}
+        >Export SRT</button>
+        <button
+          className="btn btn-sidebar"
+          aria-label="Export with video"
+          style={{ marginLeft: 6, marginTop: 8 }}
+          type="button"
+          tabIndex={0}
+        >Export Video</button>
       </div>
       <small>Feature coming soon: subtitle hard/soft export, choice of file format.</small>
     </div>

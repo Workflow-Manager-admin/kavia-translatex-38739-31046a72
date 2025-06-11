@@ -30,7 +30,12 @@ function VideoFeedWithSubtitles({
 }) {
   return (
     <div className="video-section">
-      <div className="video-feed" tabIndex={0}>
+      <div
+        className="video-feed"
+        tabIndex={0}
+        role="region"
+        aria-label="Video feed with overlaid subtitles"
+      >
         <div className="video-placeholder">
           {/* Demo placeholder for video feed */}
           {videoFrame}
@@ -88,12 +93,18 @@ function VideoFeedWithSubtitles({
           </span>
         </div>
         {/* Overlaid subtitles area */}
-        <div className="subtitles-overlay">
+        <div
+          className="subtitles-overlay"
+          role="region"
+          aria-label="Live subtitles"
+        >
           {subtitles.map((line, idx) => (
             <div
               key={idx}
               className={`subtitle ${line.speaker ?? ''}`}
-              aria-label={`Subtitle by ${line.speaker}`}>
+              aria-label={`Subtitle by ${line.speaker}: ${line.text}`}
+              tabIndex={-1}
+            >
               {line.text}
             </div>
           ))}
